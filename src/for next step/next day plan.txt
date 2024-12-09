@@ -1,2 +1,8 @@
 aj ke nav complete hoise kal ke footer ta complete korte hoibo 
 footer er background color and text color set korte hoibo 
+9.12.2024-11.36pm
+footer a  bg-image set korsi but tailwind configaration a custom color set korte pari nai try korte hoibo.
+10.12.2024-12.00am
+complete footer and tailwind configaration colors problem .
+tommorow will be trying to solve the full configaration in tailwind for such as the font family and the resposive design isues and aslo the font size isue acroding to the figma .
+must be trying to complete the home section .
