@@ -1,12 +1,14 @@
 import React from 'react';
+import './footer.css';
 
 const Footer = () => {
-    return (
-      <div>
-        <footer className="footer bg-base-200 text-base-content p-10">
+  return (
+      
+    <div className=" custom-class-back ">
+        <footer className="footer flex justify-between text-base-content p-10">
           <nav>
-            <h6 className="footer-title">SERVICES</h6>
-            <a className="link link-hover">Emergency Checkup</a>
+            <h6 className="footer-title text-thirdary ">SERVICES</h6>
+            <a className="link link-hover ">Emergency Checkup</a>
             <a className="link link-hover">Monthy Checkup</a>
             <a className="link link-hover">Weekly Checkup</a>
             <a className="link link-hover">Deep Chekup</a>
@@ -22,7 +24,7 @@ const Footer = () => {
             <a className="link link-hover">New York -101010 Hudson</a>
           </nav>
         </footer>
-        <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
+        <footer className="footer  text-base-content  flex justify-center py-4">
             <p className='text-center'>Copyright 2022 All Rights Reserved</p>
         
           
