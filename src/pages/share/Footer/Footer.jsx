@@ -3,8 +3,8 @@ import './footer.css';
 
 const Footer = () => {
   return (
-    <div className=" custom-class-back ">
-      <footer className="footer flex justify-between text-base-content p-10">
+    <div className=" custom-class-back font-normal">
+      <footer className="footer md:flex justify-between text-base-content p-10">
         <nav>
           <h6 className="footer-title text-third ">SERVICES</h6>
           <a className="link link-hover text-fourth">Emergency Checkup</a>

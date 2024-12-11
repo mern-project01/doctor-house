@@ -22,7 +22,7 @@ const menuITem = <React.Fragment>
 </React.Fragment>
 const Navebar = () => {
     return (
-      <div>
+      <div className='w-auto h-16 font-normal'>
         <div className="navbar flex justify-between bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
@@ -48,7 +48,7 @@ const Navebar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-base"
               >
                 {menuITem}
               </ul>
@@ -56,13 +56,10 @@ const Navebar = () => {
             <a className="btn btn-ghost text-xl">Doctors Portal</a>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
+            <ul className="menu menu-horizontal px-1 text-base">
               {menuITem}
             </ul>
           </div>
-          {/* <div className="navbar-end">
-            <a className="btn">Button</a>
-          </div> */}
         </div>
       </div>
     );

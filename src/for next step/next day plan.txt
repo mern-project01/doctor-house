@@ -6,3 +6,5 @@ footer a  bg-image set korsi but tailwind configaration a custom color set korte
 complete footer and tailwind configaration colors problem .
 tommorow will be trying to solve the full configaration in tailwind for such as the font family and the resposive design isues and aslo the font size isue acroding to the figma .
 must be trying to complete the home section .
+11.12.24
+complete the home banner section tommorow will complete hole the home section insa allha .
