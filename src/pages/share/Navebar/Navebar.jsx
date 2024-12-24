@@ -1,25 +1,27 @@
 import React from 'react';
 import { Link, NavLink, } from 'react-router-dom';
-const menuITem = <React.Fragment>
+const menuITem = (
+  <React.Fragment>
     <li>
-        <NavLink to="/">Home</NavLink>
+      <NavLink to="/">Home</NavLink>
     </li>
     <li>
-        <Link to="/About">About</Link>
+      <NavLink to="/About">About</NavLink>
     </li>
     <li>
-        <Link to="/Appointment">Appointment</Link>
+      <Link to="/Appointment">Appointment</Link>
     </li>
     <li>
-        <Link to="/Reviews">Reviews</Link>
+      <Link to="/Reviews">Reviews</Link>
     </li>
     <li>
-        <Link to="/Contact-us">Contact us </Link>
+      <Link to="/Contact-us">Contact us </Link>
     </li>
     <li>
-        <Link to="/Login">Login </Link>
+      <Link to="/Login">Login </Link>
     </li>
-</React.Fragment>
+  </React.Fragment>
+);
 const Navebar = () => {
     return (
       <div className='w-auto h-16 font-normal'>
@@ -53,7 +55,7 @@ const Navebar = () => {
                 {menuITem}
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl">Doctors Portal</a>
+            <NavLink to="/" className="btn btn-ghost text-xl visited:">Doctors Portal</NavLink>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 text-base">

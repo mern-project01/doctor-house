@@ -12,7 +12,7 @@ const HomeBanner = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="hero-content flex-col lg:flex-row-reverse pb-32">
+      <div className="hero-content flex-col lg:flex-row-reverse py-32">
         <img src={chair} />
         <div>
           <h1 className="text-2xl my-2 lg:text-5xl font-bold">

@@ -3,16 +3,16 @@ import people from '../../../assets/img/people-1 1.png'
 import mask from '../../../assets/img/Mask Group 7@2x 1.png'
 const Hometestimonal = () => {
     return (
-      <div className="px-28 py-28">
+      <div className=" py-28 md:px-28">
         {/* this is for testimonal banner */}
-        <div className="pb-24 md:flex flex-row-reverse justify-between">
-          <img src={mask} alt="" />
+        <div className="pb-24 flex flex-row- justify-between">
           <div>
             <h4 className="pb-6 text-secondary text-xl font-extralight">
               Testimonial
             </h4>
             <h1 className="text-accent text-4xl">What Our Patients Says</h1>
           </div>
+          <img src={mask} alt=""/>
         </div>
         {/* this is for testimonal card section */}
         <div className=" px-12 md:grid grid-cols-3 gap-16">
