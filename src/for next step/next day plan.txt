@@ -8,3 +8,5 @@ tommorow will be trying to solve the full configaration in tailwind for such as 
 must be trying to complete the home section .
 11.12.24
 complete the home banner section tommorow will complete hole the home section insa allha .
+26.11.24
+tommorow will complete the authentication system insa allha and complete the relationshiph between the appionment and the login page .
