@@ -1,63 +1,65 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const SingUp = () => {
+  const handleSubmite = (event) => {
+    event.preventDefualt()
+  }
     return (
       <div id='SingUp'>
         <div className="hero min-h-screen">
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <h1 className="text-center pt-8 text-3xl text-accent">SignUp</h1>
-            <form className="card-body">
+            <h1 className="text-center pt-8 text-3xl text-slate-500 ">Create a new acount here--</h1>
+            <form onClick={handleSubmite} className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text text-xl">Name</span>
                 </label>
                 <input
                   type="name"
-                  //placeholder="Name"
+                  placeholder="Name"
+                  name='name'
                   className="input input-bordered"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-xl">Email</span>
                 </label>
                 <input
                   type="email"
-                  //  placeholder="email"
+                  placeholder="email"
+                  name='email'
                   className="input input-bordered"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-xl">Password</span>
                 </label>
                 <input
                   type="password"
-                  //placeholder="password"
+                  placeholder="password"
+                  name='password'
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
+               
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-accent text-[16px]">Login</button>
+                <button className="btn btn-accent text-[16px]">Resister</button>
               </div>
             </form>
             <div>
-              <a
-                href="#Login"
-                className="text-center text-[12px] block link link-hover"
+              <NavLink
+                to='/login'
+                className="text-center text-lg block link link-hover"
               >
-                <span className="text-accent pe-2">New to Doctors Portal?</span>
-                <span className="text-secondary">Create new account</span>
-              </a>
+                <span className="text-accent pe-2">Already have an acount?</span>
+                <span className="text-secondary">Login</span>
+              </NavLink>
 
               <div className="grid grid-cols-3 py-5">
                 <hr className=""></hr>

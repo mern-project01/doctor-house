@@ -7,7 +7,6 @@ const Login = () => {
 
   return (
     <div id="Login">
-  
       <div>
         <div className="hero min-h-screen">
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -15,18 +14,18 @@ const Login = () => {
             <form className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-xl">Email</span>
                 </label>
                 <input
                   type="email"
-                   placeholder="email"
+                  placeholder="email"
                   className="input input-bordered"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-xl">Password</span>
                 </label>
                 <input
                   type="password"
@@ -35,7 +34,10 @@ const Login = () => {
                   required
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
+                  <a
+                    href="#"
+                    className="label-text-alt text-xl link link-hover"
+                  >
                     Forgot password?
                   </a>
                 </label>
@@ -44,14 +46,14 @@ const Login = () => {
                 <button className="btn btn-accent text-[16px]">Login</button>
               </div>
             </form>
-            <NavLink to="/singup">
-              <a
+            <div>
+              <NavLink to="/singup"
                 href="#SingUp"
-                className="text-center text-[12px] block link link-hover"
+                className="text-center text-lg block link link-hover"
               >
                 <span className="text-accent pe-2">New to Doctors Portal?</span>
                 <span className="text-secondary">Create new account</span>
-              </a>
+              </NavLink>
 
               <div className="grid grid-cols-3 py-5">
                 <hr className=""></hr>
@@ -63,10 +65,10 @@ const Login = () => {
                   CONTINUE WITH GOOGLE
                 </button>
               </div>
-            </NavLink>
+            </div>
           </div>
         </div>
-      </div>{" "} 
+      </div>{" "}
     </div>
   );
 };
