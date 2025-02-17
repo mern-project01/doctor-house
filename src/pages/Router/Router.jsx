@@ -5,6 +5,8 @@ import About from "../About/About";
 import Appointment from "../Appointment/Appointment";
 import Login from "../Login/Login";
 import SingUp from "../SingUp/SingUp";
+import Dassboard from "../Dassboard/Dassboard";
+import PrivetRout from "../../components/PrivetRout/PrivetRout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +31,12 @@ const router = createBrowserRouter([
       {
         path: "/singup",
         element:<SingUp></SingUp>
+      },
+      {
+        path: '/profile',
+        element: <PrivetRout>
+          <Dassboard></Dassboard>
+        </PrivetRout>
       }
     ],
   },

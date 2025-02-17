@@ -1,30 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink, } from 'react-router-dom';
-const menuITem = (
-  <React.Fragment>
-    <li>
-      <NavLink to="/">Home</NavLink>
-    </li>
-    <li>
-      <NavLink to="/About">About</NavLink>
-    </li>
-    <li>
-      <Link to="/Appointment">Appointment</Link>
-    </li>
-    <li>
-      <Link to="/Reviews">Reviews</Link>
-    </li>
-    <li>
-      <Link to="/Contact-us">Contact us </Link>
-    </li>
-    <li>
-      <Link to="/Login">Login </Link>
-    </li>
-  </React.Fragment>
-);
+import { AuthContex } from '../../../components/AuthContext/UserContex';
+
 const Navebar = () => {
+  const { User } = useContext(AuthContex);
+  const menuITem = (
+    <React.Fragment>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/About">About</NavLink>
+      </li>
+      <li>
+        <Link to="/Appointment">Appointment</Link>
+      </li>
+      <li>
+        <Link to="/Reviews">Reviews</Link>
+      </li>
+      <li>
+        <Link to="/Contact-us">Contact us </Link>
+      </li>
+      <li>
+        <Link to="/Login">Login </Link>
+      </li>
+      <li>
+        <Link to="/profile">{User?.displayName || "Profile"} </Link>
+      </li>
+    </React.Fragment>
+  );
     return (
-      <div className='w-auto h-16 font-normal'>
+      <div className="w-auto h-16 font-normal">
         <div className="navbar flex justify-between bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
@@ -55,12 +61,12 @@ const Navebar = () => {
                 {menuITem}
               </ul>
             </div>
-            <NavLink to="/" className="btn btn-ghost text-xl visited:">Doctors Portal</NavLink>
+            <NavLink to="/" className="btn btn-ghost text-xl visited:">
+              Doctors Portal
+            </NavLink>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-base">
-              {menuITem}
-            </ul>
+            <ul className="menu menu-horizontal px-1 text-base">{menuITem}</ul>
           </div>
         </div>
       </div>
