@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         element:<SingUp></SingUp>
       },
       {
-        path: '/profile',
+        path: '/dasboard',
         element: <PrivetRout>
           <Dassboard></Dassboard>
         </PrivetRout>

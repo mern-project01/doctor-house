@@ -25,7 +25,12 @@ const Navebar = () => {
         <Link to="/Login">Login </Link>
       </li>
       <li>
-        <Link to="/profile">{User?.displayName || "Profile"} </Link>
+        {/* sssdff */}
+        {
+         ( User?.displayName ) ? <Link to="/dasboard">{User?.displayName} </Link>:""
+
+      }
+        {/* sadlfkj */}
       </li>
     </React.Fragment>
   );
