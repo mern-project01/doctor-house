@@ -1,24 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AuthContex } from "../../components/AuthContext/UserContex";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import app from "../../firebase/Firebase.init";
 
 const Login = () => {
+  const [User, setUser] = useState()
+  const [Err,setErr]=useState()
   const googleProvider = new GoogleAuthProvider();
   const auth = getAuth(app);
 
-  const { User, Err, setUser, setError, handleGoogle } = useContext(AuthContex);
   const handleGoogleLogin = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
         console.log(user);
-        setUser(user);
-                  alert(`New User Name is ${user?.dislpayName}`);
+setUser(user)
 
-        // if (user.dislpayName) {
-        // }
+        
       })
       .catch((err) => setError(err));
 

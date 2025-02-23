@@ -24,14 +24,13 @@ const Navebar = () => {
       <li>
         <Link to="/Login">Login </Link>
       </li>
-      <li>
-        {/* sssdff */}
+      {/* <li>
         {
          ( User?.displayName ) ? <Link to="/dasboard">{User?.displayName} </Link>:""
 
       }
-        {/* sadlfkj */}
-      </li>
+      </li> */}
+      
     </React.Fragment>
   );
     return (
