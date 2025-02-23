@@ -1,34 +1,37 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContex } from "../../components/AuthContext/UserContex";
-
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import app from "../../firebase/Firebase.init";
 
 const Login = () => {
-  const { User,Err,setUser,setError,handleGoogle } = useContext(AuthContex)
+  const googleProvider = new GoogleAuthProvider();
+  const auth = getAuth(app);
+
+  const { User, Err, setUser, setError, handleGoogle } = useContext(AuthContex);
   const handleGoogleLogin = () => {
-    handleGoogle()
+    signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
-        console.log(user)
-        setUser(user)
+        console.log(user);
+        setUser(user);
         if (User.dislpayName) {
           alert(`New User Name is ${User?.dislpayName}`);
         }
       })
-      .catch(err => setError(err))
-    
-    console.log(User)
+      .catch((err) => setError(err));
 
-    
-  }
-  
+    console.log(User);
+  };
 
   return (
     <div id="Login">
       <div>
         <div className="hero min-h-screen">
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <h1 className="text-center pt-8 text-3xl text-accent">{User?.displayName || Err} Login</h1>
+            <h1 className="text-center pt-8 text-3xl text-accent">
+              {User?.displayName || Err} Login
+            </h1>
             <form className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -65,7 +68,8 @@ const Login = () => {
               </div>
             </form>
             <div>
-              <NavLink to="/singup"
+              <NavLink
+                to="/singup"
                 href="#SingUp"
                 className="text-center text-lg block link link-hover"
               >
@@ -79,7 +83,10 @@ const Login = () => {
                 <hr></hr>
               </div>
               <div className="pb-5  text-center">
-                <button onClick={handleGoogleLogin} className="btn btn-outline outline-slate-600 ">
+                <button
+                  onClick={handleGoogleLogin}
+                  className="btn btn-outline outline-slate-600 "
+                >
                   CONTINUE WITH GOOGLE
                 </button>
               </div>
