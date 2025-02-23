@@ -15,9 +15,10 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setUser(user);
-        if (User.dislpayName) {
-          alert(`New User Name is ${User?.dislpayName}`);
-        }
+                  alert(`New User Name is ${user?.dislpayName}`);
+
+        // if (user.dislpayName) {
+        // }
       })
       .catch((err) => setError(err));
 
